@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ede9fe;
+            padding: 40px;
+        }
+        #container{
+            background-color: #f5f3ff;
+            max-width: 600px;
+            padding : 40px;
+            margin:auto;
+            border-radius: 14px;
+        }
+        h1,#about, #skills, #content{
+            text-align: center;
+        }
+        #skill{
+            color: purple;
+            display: inline-block;
+            background-color: white;
+            padding: 8px,14px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: bold;
+        }
+        button{
+            padding: 12px 18px;
+            border: 0;
+            border-radius: 8px;
+            background-color: purple;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #actions{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px;
+        }
+        #content{
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+        #highlight{
+            color: purple;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+    #actions {
+        flex-direction: column;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1>Rajas</h1>
+    <p id="about">Hi, I am Studying <span id="highlight">MERN stack</span> development</p>
+    <div id="skills">
+        <p id="skill">HTML</p>
+        <p id="skill">CSS</p>
+        <p id="skill">JavaScript</p>
+    </div>
+    <div id="actions">
+        <button onclick="showAbout()">About me</button>
+        <button onclick="showCert()">Certificate</button>
+        <button onclick="showContact()">Contact us</button>
+        <button onclick="showProjects()">Projects</button>
+    </div>
+    <div id="content"></div>
+    </div>
+
+<script>
+
+    let contactBox = document.getElementById("content");
+    function showAbout()
+    {
+        contactBox.style.display = "block";
+        contactBox.innerText = "I am currently studying in Computer Engineering"
+    }
+    function showCert()
+    {
+        contactBox.style.display = "block";
+        contactBox.innerText = "Java FullStack Dev"
+    }
+    function showContact()
+    {
+        contactBox.style.display = "block";
+        contactBox.innerText = "93241xxxx"
+    }
+    function showProjects()
+    {
+        contactBox.style.display = "block";
+        contactBox.innerText = "Virtual Banking System"
+    }
+
+</script>
+
+</body>
+</html>
